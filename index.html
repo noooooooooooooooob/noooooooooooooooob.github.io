@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
-    <form id="todo-form">
-        <input type="text" placeholder="Enter your todo" required>
-    </form>
-    <div id = "weather">
-        <span></span>
-        <span></span>
+  </head>
+  <body>
+    <div class="user-information">
+      <div class="clock-container">
+        <h1><div id="clock" class="clock"></div></h1>
+      </div>
+      <form id="login-form">
+        <div class="greeting-container">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            required
+            class="hidden"
+          />
+          <button class="btn btn-default btn-primary" type="submit">
+            Submit
+          </button>
+          <h2 id="greeting" class="hidden"></h2>
+        </div>
+      </form>
+      <div class="todo-container">
+        <form id="todo-form">
+          <input
+            type="text"
+            placeholder="Enter your todo"
+            required
+            maxlength="20"
+            minlength="1"
+          />
+        </form>
+        <ul id="todo-list" class="todo-list"></ul>
+      </div>
     </div>
-    <ul id="todo-list"></ul>
+    <div id="weather" class="weather">
+      <span></span>
+      <span></span>
+    </div>
+
     <script src="JS/main.js"></script>
     <script src="JS/clock.js"></script>
     <script src="JS/todo.js"></script>
     <script src="JS/weather.js"></script>
-</body>
+    <script src="JS/greetings.js"></script>
+    <script src="JS/background.js"></script>
+  </body>
 </html>

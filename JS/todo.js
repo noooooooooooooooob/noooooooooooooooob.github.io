@@ -14,10 +14,12 @@ function saveToDos()
 function paintToDo(newToDoObj) {
     const li = document.createElement("li");
     li.id=newToDoObj.id;
+    li.classList.add("todo-item");
     const span = document.createElement("span");
     span.innerText = newToDoObj.text;
     const button = document.createElement("button");
-    button.innerText = "❌";
+    button.innerText = "✘";
+    button.classList.add("delete-button");
     button.addEventListener("click", (event) => {
         const li = event.target.parentElement;
         toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
